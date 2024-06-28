@@ -112,6 +112,10 @@ if (!isset($_SESSION['auth'])) {
         <li class="nav-item">
             <a class="nav-link" href="/reminders">Reminders</a>
         </li>
+        <!-- logout -->
+        <li class="nav-item">
+            <a class="nav-link" href="/logout">Logout</a>
+        </li>
       </ul>
     </div>
   </div>

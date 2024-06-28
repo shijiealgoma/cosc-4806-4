@@ -12,22 +12,29 @@
         </div>
     </div>
     <div class="main-content mt-3">
-      <?php
-        // print_r($data['reminders']);
-
-        foreach ($data['reminders'] as $reminder){
-            echo "<div class='row'>";
-            echo "<div class='col-sm-auto inRow'>";
-            echo "<h3>" . $reminder['subject'] . "</h3>";
-            echo "<div>";
-            echo "<span class='pr50' > <a href='/reminders/update/" . $reminder['id'] . "'>Update</a></span>";
-            echo "<span><a href='/reminders/delete/" . $reminder['id']."'>Delete</a></span>";
-            echo "</div>";
-            echo "</div>";
-            echo "</div>";
-        }
-        
-        ?>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>User ID</th>
+                    <th>Subject</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($data['reminders'] as $reminder): ?>
+                    <tr>
+                        <td><?php echo $reminder['id']; ?></td>
+                        <td><?php echo $reminder['user_id']; ?></td>
+                        <td><?php echo $reminder['subject']; ?></td>
+                        <td>
+                            <a href="/reminders/update/<?php echo $reminder['id']; ?>">Update</a>
+                            <a href="/reminders/delete/<?php echo $reminder['id']; ?>">Delete</a>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
     </div>
 
     
