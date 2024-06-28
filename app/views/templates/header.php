@@ -83,6 +83,18 @@ if (!isset($_SESSION['auth'])) {
                 bottom: 0;
                 width: 100%;
             }
+
+            .inRow{
+                width: 100%;
+                display:flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-content: center;
+            }
+
+            .pr50{
+                padding-right:50px;
+            }
         </style>
     </head>
     <body>
@@ -96,6 +108,9 @@ if (!isset($_SESSION['auth'])) {
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/home">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/reminders">Reminders</a>
         </li>
       </ul>
     </div>

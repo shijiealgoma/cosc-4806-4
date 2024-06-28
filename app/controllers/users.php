@@ -2,7 +2,7 @@
 
 class Users extends Controller {
 
-    public function index() {		
+    public function index() {		 
       $userModel = $this->model('User');
       $users = $userModel->test();
 
