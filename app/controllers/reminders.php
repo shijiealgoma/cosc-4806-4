@@ -44,16 +44,11 @@ class Reminders extends Controller{
       header('Location: /login');
     }
 
-    // echo "subject: " . $subject;
-    // echo "userid: " . $_SESSION['userid'];
 
     //call model create_reminder
     $reminder = $this->model('Reminder');
     $status = $reminder->create_reminder($_SESSION['userid'], $subject);
 
-    // echo "status: " . $status;
-
-    //go to reminders page
     header('Location: /reminders/index');
     
   }

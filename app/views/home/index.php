@@ -4,6 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>Hey</h1>
+                <p><a href="/reminders">Go to Reminders</a></p>
                 <p class="lead"> <?= date("F jS, Y"); ?></p>
             </div>
         </div>
@@ -23,4 +24,4 @@
 
     
 </div>
-    <?php require_once 'app/views/templates/footer.php' ?>
+<?php require_once 'app/views/templates/footer.php' ?>

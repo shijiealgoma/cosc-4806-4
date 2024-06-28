@@ -21,12 +21,12 @@ class Reminder{
 
   //update reminder
   public function update_reminder($id, $reminder){
-    echo "update reminder";
-    echi "id: " . $id . " reminder: " . $reminder;"
+    // echo "update reminder";
+    // echo "id: " . $id . " reminder: " . $reminder; 
     
     try {
       $db = db_connect();
-      $statement = $db->prepare("update reminders set reminder = :reminder where id = :id;");
+      $statement = $db->prepare("update reminders set subject = :reminder where id = :id;");
       $statement->bindValue(':reminder', $reminder);
       $statement->bindValue(':id', $id);
       $status = $statement->execute();
